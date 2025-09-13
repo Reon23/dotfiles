@@ -1,0 +1,57 @@
+{
+    "layer": "top",
+        "position": "top",
+        "height": 22,
+        "margin-top": 8,
+        "margin-left": 8,
+        "margin-right": 8,
+        "modules-left": ["clock", "hyprland/mode"],
+        "modules-center": ["hyprland/workspaces"],
+        "modules-right": ["pulseaudio", "network", "battery", "tray"],
+
+        "hyprland/workspaces": {
+            "format": "{}",
+            "persistent-workspaces": {
+                "1": [], // Always show a workspace with name '1', on all outputs if it does not exists
+                "2": [], // Always show a workspace with name '2', on all outputs if it does not exists
+                "3": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            }
+        },
+
+        "clock": {
+            "format": "{:%a %b %d %H:%M}",
+            "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+        },
+
+        "pulseaudio": {
+            "format": "{icon} {volume}% ",
+            "format-muted": "",
+            "tooltip": true,
+            "format-icons": {
+                "headphone": [""],
+                "default": ["", "", ""],
+            }
+        },
+
+        "battery": {
+            "states": {
+                // "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{icon} {capacity}%",
+            "format-charging": "󰂄{capacity}%",
+            "format-plugged": "󱉝{capacity}%",
+            // "format-good": "", // An empty format will hide the module
+            // "format-full": "",
+            "format-icons": ["󰁺","󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        },
+
+        "network": {
+            "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+            "format-ethernet": " {ifname}",
+            "format-disconnected": "󰕑",
+            "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+            "on-click": "networkmanager_dmenu"
+        }
+}
