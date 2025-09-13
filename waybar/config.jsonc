@@ -5,7 +5,7 @@
         "margin-top": 8,
         "margin-left": 8,
         "margin-right": 8,
-        "modules-left": ["clock", "hyprland/mode"],
+        "modules-left": ["clock", "cpu", "memory", "disk", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["pulseaudio", "network", "battery", "tray", "custom/power"],
 
@@ -21,6 +21,21 @@
         "clock": {
             "format": "{:%a %b %d %H:%M}",
             "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+        },
+
+        "cpu": {
+            "format": " |  {usage}%",
+            "interval": 10
+        },
+
+        "memory": {
+            "format": " 󰍛 {percentage}%",
+            "interval": 30
+        },
+
+        "disk": {
+            "format": " 󰋊 {percentage_used}%",
+            "interval": 30
         },
 
         "pulseaudio": {
