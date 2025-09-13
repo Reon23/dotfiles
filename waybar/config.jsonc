@@ -7,7 +7,7 @@
         "margin-right": 8,
         "modules-left": ["clock", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["pulseaudio", "network", "battery", "tray"],
+        "modules-right": ["pulseaudio", "network", "battery", "tray", "custom/power"],
 
         "hyprland/workspaces": {
             "format": "{}",
@@ -29,7 +29,7 @@
             "tooltip": true,
             "format-icons": {
                 "headphone": [""],
-                "default": ["", "", ""],
+                "default": ["", "", ""]
             }
         },
 
@@ -53,5 +53,10 @@
             "format-disconnected": "󰕑",
             "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
             "on-click": "networkmanager_dmenu"
+        },
+
+        "custom/power": {
+            "format": "󰐥",
+            "on-click": "wlogout"
         }
 }
