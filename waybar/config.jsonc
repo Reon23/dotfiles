@@ -7,7 +7,7 @@
         "margin-right": 8,
         "modules-left": ["clock", "cpu", "memory", "disk", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["pulseaudio", "network", "battery", "tray", "custom/power"],
+        "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
 
         "hyprland/workspaces": {
             "format": "{}",
@@ -61,6 +61,7 @@
             // "format-full": "",
             "format-icons": ["󰁺","󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         },
+
 
         "network": {
             "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",

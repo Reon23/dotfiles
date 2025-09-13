@@ -48,7 +48,7 @@ window#waybar {
 }
 
 #battery {
-  padding-left: 8px;
+  padding: 0 8px;
 }
 
 #custom-power {
