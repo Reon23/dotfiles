@@ -46,7 +46,8 @@
                 "updated": "󰕥 "
             },
             "exec-if": "which waybar-module-pacman-updates",
-            "exec": "waybar-module-pacman-updates --no-zero-output"
+            "exec": "waybar-module-pacman-updates --no-zero-output --color-semver-updates --interval-seconds 5 --network-interval-seconds 300",
+            "on-click": "kitty -e yay -Syu"
         },
 
         "pulseaudio": {
@@ -78,7 +79,12 @@
             "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
             "format-ethernet": " {ifname}",
             "format-disconnected": "󰕑 ",
-            "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+            "format-disabled": "󰖪 ",
+            "format-icons": ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+            "tooltip": true,
+            "tooltip-format": "ip: {ipaddr}\nfreq: {frequency}GHz\nstrength: {signalStrength}%",
+            "tooltip-format-disconnected": "disconnected",
+            "tooltip-format-disabled": "Network Disabled\nClick to enable",
             "on-click": "networkmanager_dmenu"
         },
 
