@@ -5,7 +5,7 @@
         "margin-top": 8,
         "margin-left": 8,
         "margin-right": 8,
-        "modules-left": ["clock", "cpu", "memory", "disk", "hyprland/mode"],
+        "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
 
@@ -38,6 +38,17 @@
             "interval": 30
         },
 
+        "custom/updates": {
+            "format": " | {} {icon}",
+            "return-type": "json",
+            "format-icons": {
+                "has-updates": "󰏕 ",
+                "updated": "󰕥 "
+            },
+            "exec-if": "which waybar-module-pacman-updates",
+            "exec": "waybar-module-pacman-updates --no-zero-output"
+        },
+
         "pulseaudio": {
             "format": "{icon} {volume}% ",
             "format-muted": "",
@@ -66,7 +77,7 @@
         "network": {
             "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
             "format-ethernet": " {ifname}",
-            "format-disconnected": "󰕑",
+            "format-disconnected": "󰕑 ",
             "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
             "on-click": "networkmanager_dmenu"
         },
