@@ -5,7 +5,7 @@
         "margin-top": 8,
         "margin-left": 8,
         "margin-right": 8,
-        "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "hyprland/mode"],
+        "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "custom/chatgpt", "custom/chrome", "custom/github", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
 
@@ -43,11 +43,32 @@
             "return-type": "json",
             "format-icons": {
                 "has-updates": "󰏕 ",
-                "updated": "󰕥 "
+                "updated": " "
             },
             "exec-if": "which waybar-module-pacman-updates",
             "exec": "waybar-module-pacman-updates --no-zero-output --color-semver-updates --interval-seconds 5 --network-interval-seconds 300",
             "on-click": "kitty -e yay -Syu"
+        },
+
+        "custom/chatgpt": {
+            "format": "  ",
+            "on-click": "google-chrome-stable --profile-directory='Default' --app=https://chatgpt.com",
+            "tooltip": true,
+            "tooltip-format": "Chatgpt"
+        },
+
+        "custom/chrome": {
+            "format": "  ",
+            "on-click": "google-chrome-stable",
+            "tooltip": true,
+            "tooltip-format": "Chrome"
+        },
+
+        "custom/github": {
+            "format": "  ",
+            "on-click": "google-chrome-stable --profile-directory='Default' --app=https://github.com",
+            "tooltip": true,
+            "tooltip-format": "Github"
         },
 
         "pulseaudio": {
