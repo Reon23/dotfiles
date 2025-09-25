@@ -1,3 +1,4 @@
+@import "/home/reo/.cache/wal/colors-waybar.css";
 * {
   border: none;
   border-radius: 0;
@@ -23,21 +24,24 @@ window#waybar {
 #workspaces button {
   background: transparent;
   /* background: #3b1225; */
+  /* color: #1e1e2e; */
+  color: @color8;
   padding: 2px 4px;
   margin: 0 5px;
   border-radius: 50%;
 }
 
 #workspaces button.active {
-  background: white;
-  color: #1e1e2e;
+  /* background: white; */
   border-radius: 50%;
+  color: @color6;
 }
 
 .modules-left {
   padding: 0 10px;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.4);
+  color: @color6;
 }
 
 .modules-right {
@@ -45,6 +49,7 @@ window#waybar {
   padding-left: 20px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
+  color: @color6;
 }
 
 #battery {

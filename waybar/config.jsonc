@@ -10,7 +10,12 @@
         "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
 
         "hyprland/workspaces": {
-            "format": "{}",
+            "format": "{icon}",        
+            "format-icons": {
+              "active": " ",
+              "urgent": " ",
+              "default": " ",
+            },
             "persistent-workspaces": {
                 "1": [], // Always show a workspace with name '1', on all outputs if it does not exists
                 "2": [], // Always show a workspace with name '2', on all outputs if it does not exists
@@ -73,7 +78,7 @@
 
         "pulseaudio": {
             "format": "{icon} {volume}% ",
-            "format-muted": "",
+            "format-muted": "󰖁  ",
             "tooltip": true,
             "format-icons": {
                 "headphone": [""],
