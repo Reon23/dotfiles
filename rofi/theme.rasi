@@ -1,7 +1,7 @@
 * {
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-active-foreground:  var(background);
-    lightfg:                     rgba (110, 0, 50, 1);
+    lightfg:                     rgba (50, 0, 130, 1);
     separatorcolor:              var(foreground);
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
@@ -9,19 +9,19 @@
     spacing:                     2;
     border-color:                var(foreground);
     normal-background:           var(background);
-    background-color:            rgba ( 0, 0, 0, 0 % );
+    background-color:            rgba ( 0, 0, 0, 30 % );
     alternate-active-background: var(lightbg);
     active-foreground:           var(blue);
     blue:                        rgba ( 38, 139, 210, 100 % );
     urgent-background:           var(background);
     alternate-normal-foreground: var(foreground);
     selected-active-background:  var(blue);
-    background:                  rgba ( 0, 0, 0, 0.7 );
+    background:                  rgba ( 0, 0, 0, 0.5 );
     selected-normal-foreground:  var(lightbg);
     active-background:           var(background);
     alternate-active-foreground: var(blue);
-    alternate-normal-background: rgba ( 0, 0, 0, 0.9 );
-    foreground:                  rgba (110, 0, 50, 1);
+    alternate-normal-background: rgba ( 0, 0, 0, 0.5 );
+    foreground:                  rgba (50, 0, 130, 1);
     selected-urgent-background:  var(red);
     selected-urgent-foreground:  var(background);
     normal-foreground:           var(foreground);
@@ -35,7 +35,7 @@ element {
     cursor:  pointer;
 }
 element normal.normal {
-    background-color: var(normal-background);
+    // background-color: var(normal-background);
     text-color:       var(normal-foreground);
 }
 element normal.urgent {
@@ -59,7 +59,7 @@ element selected.active {
     text-color:       var(selected-active-foreground);
 }
 element alternate.normal {
-    background-color: var(alternate-normal-background);
+    // background-color: var(alternate-normal-background);
     text-color:       var(alternate-normal-foreground);
 }
 element alternate.urgent {
