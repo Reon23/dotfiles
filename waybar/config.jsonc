@@ -57,21 +57,21 @@
 
         "custom/chatgpt": {
             "format": "  ",
-            "on-click": "google-chrome-stable --profile-directory='Default' --app=https://chatgpt.com",
+            "on-click": "brave --app=https://chatgpt.com",
             "tooltip": true,
             "tooltip-format": "Chatgpt"
         },
 
         "custom/chrome": {
-            "format": "  ",
-            "on-click": "google-chrome-stable",
+            "format": "  ",
+            "on-click": "brave",
             "tooltip": true,
-            "tooltip-format": "Chrome"
+            "tooltip-format": "Surf Online"
         },
 
         "custom/github": {
             "format": "  ",
-            "on-click": "google-chrome-stable --profile-directory='Default' --app=https://github.com",
+            "on-click": "brave --app=https://github.com",
             "tooltip": true,
             "tooltip-format": "Github"
         },
