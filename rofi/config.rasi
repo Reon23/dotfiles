@@ -1,5 +1,8 @@
 configuration {
 
+    show-icons: true;
+
+
     // Timeout from user input.
     timeout {
         // The delay after inactivity to execute action.
