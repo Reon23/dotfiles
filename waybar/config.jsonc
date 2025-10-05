@@ -5,7 +5,7 @@
         "margin-top": 8,
         "margin-left": 8,
         "margin-right": 8,
-        "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "custom/chatgpt", "custom/chrome", "custom/github", "hyprland/mode"],
+        "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "custom/chatgpt", "custom/chrome", "custom/github", "custom/windows", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
 
@@ -30,12 +30,14 @@
 
         "cpu": {
             "format": " |  {usage}%",
-            "interval": 10
+            "interval": 10,
+            "on-click": "kitty -e btop"
         },
 
         "memory": {
             "format": " 󰍛 {percentage}%",
-            "interval": 30
+            "interval": 30,
+            "on-click": "kitty -e btop"
         },
 
         "disk": {
@@ -57,23 +59,30 @@
 
         "custom/chatgpt": {
             "format": "  ",
-            "on-click": "brave --app=https://chatgpt.com",
+            "on-click": "zen-browser https://chatgpt.com",
             "tooltip": true,
             "tooltip-format": "Chatgpt"
         },
 
         "custom/chrome": {
             "format": "  ",
-            "on-click": "brave",
+            "on-click": "zen-browser",
             "tooltip": true,
             "tooltip-format": "Surf Online"
         },
 
         "custom/github": {
             "format": "  ",
-            "on-click": "brave --app=https://github.com",
+            "on-click": "zen-browser https://github.com",
             "tooltip": true,
             "tooltip-format": "Github"
+        },
+
+        "custom/windows": {
+            "format": " 󰖳 ",
+            "on-click": "virt-viewer --connect qemu:///system win10",
+            "tooltip": true,
+            "tooltip-format": "Windows VM"
         },
 
         "pulseaudio": {
@@ -83,7 +92,8 @@
             "format-icons": {
                 "headphone": [""],
                 "default": ["", "", ""]
-            }
+            },
+            "on-click": "pavucontrol"
         },
 
         "battery": {

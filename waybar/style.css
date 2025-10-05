@@ -37,6 +37,12 @@ window#waybar {
   color: @color6;
 }
 
+#workspaces button.urgent {
+  /* background: white; */
+  border-radius: 50%;
+  color: rgb(200, 0, 0);
+}
+
 .modules-left {
   padding: 0 10px;
   border-radius: 15px;
