@@ -112,7 +112,7 @@
 
 
         "network": {
-            "format-wifi": "{icon} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+            "format-wifi": "{icon}{essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
             "format-ethernet": " {ifname}",
             "format-disconnected": "󰕑 ",
             "format-disabled": "󰖪 ",
