@@ -3,8 +3,8 @@
         "position": "top",
         "height": 22,
         "margin-top": 8,
-        "margin-left": 8,
-        "margin-right": 8,
+        "margin-left": 12,
+        "margin-right": 12,
         "modules-left": ["clock", "cpu", "memory", "disk", "custom/updates", "custom/chatgpt", "custom/chrome", "custom/github", "custom/windows", "hyprland/mode"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
@@ -42,7 +42,8 @@
 
         "disk": {
             "format": " 󰋊 {percentage_used}%",
-            "interval": 30
+            "interval": 30,
+            "on-click": "filelight"
         },
 
         "custom/updates": {
@@ -125,7 +126,8 @@
         },
 
         "custom/power": {
+            "orientation": "vertical",
             "format": "󰐥",
-            "on-click": "wlogout"
+            "on-click": "bash ~/.config/wlogout/launch.sh"
         }
 }

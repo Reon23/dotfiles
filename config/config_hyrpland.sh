@@ -1,5 +1,6 @@
 #!/bin/bash
-choice=$(echo -en "config\nappearance\nautostart\nenvironment\ninput\nkeybinds\nmonitors\nmisc\npermissions\nprograms\nwindow rules\n" | rofi -dmenu -p "hyprland")
+choice=$(echo -en "  config\n  appearance\n  autostart\n  environment\n  input\n  keybinds\n  monitors\n?  misc\n  permissions\n   programs\n  window rules\n" | rofi -dmenu -p "hyprland")
+choice=${choice:3}
 
 case "$choice" in
 "config")

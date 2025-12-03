@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === CONFIG ===
-WALLPAPER="$HOME/Pictures/wallpaper/a_road_with_trees_on_either_side_of_it.jpg"
+WALLPAPER="$HOME/Pictures/wallpaper/default.png"
 
 # Wait a bit to ensure Hyprland is ready
 sleep 1
