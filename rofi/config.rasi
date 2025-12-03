@@ -1,0 +1,22 @@
+configuration {
+
+    show-icons: true;
+
+
+    // Timeout from user input.
+    timeout {
+        // The delay after inactivity to execute action.
+        delay: 0;
+        // The action to execute once the delay expires.
+        action: "kb-cancel";
+    }
+
+    // File browser mode.
+    filebrowser {
+        sorting-method:    "name";
+        directories-first: true;
+    }
+    font: "Fira Code 14";
+}
+
+@theme "~/.config/rofi/theme.rasi"
