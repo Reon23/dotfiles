@@ -5,29 +5,48 @@ import Quickshell.Wayland
 import Quickshell.Hyprland
 
 ColumnLayout {
-	anchors.fill: parent
-	anchors.margins: 15
+    anchors.fill: parent
+    anchors.margins: 15
 
-	Repeater {
-		model: Math.max(3, Hyprland.workspaces.values.length)
-		Item {
-			width: parent.width
-			height: 20
-			property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
-			property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
+    // Build the workspace list
+    property var activeWorkspaces: {
+        const ids = Hyprland.workspaces.values.map(w => w.id);
+        const maxId = Math.max(...ids, 3);
 
-			MouseArea {
-				anchors.fill: parent
-				onClicked: Hyprland.dispatch("workspace " + (index + 1))
-			}
+        let result = [1, 2, 3];
 
-			Text {
-				text: "" 
-				color: isActive ? "#ffffff" : "#555555"
-				font { pixelSize: 14; bold: true }
+        // Add only active workspaces above 3
+        for (let i = 4; i <= maxId; i++) {
+            if (ids.includes(i)) result.push(i);
+        }
 
-			}
-		}
-	}
-	Item {Layout.fillHeight: true}
+        return result;
+    }
+
+	// Render min 3 + active workspaces
+    Repeater {
+        model: activeWorkspaces
+
+        Item {
+            width: parent.width
+            height: 20
+
+            property int wsId: modelData
+            property bool isActive: Hyprland.focusedWorkspace?.id === wsId
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: Hyprland.dispatch("workspace " + wsId)
+            }
+
+            Text {
+                text: ""
+                color: isActive ? "#ffffff" : "#555555"
+                font { pixelSize: 14; bold: true }
+            }
+        }
+    }
+
+    Item { Layout.fillHeight: true }
 }
+
