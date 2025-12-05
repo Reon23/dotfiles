@@ -12,7 +12,12 @@ PanelWindow {
 	color: "#000000"
 	ColumnLayout {
 		anchors.fill: parent
-		Workspaces { }
-		Clock { }
+		Workspaces { 
+			Layout.alignment: Qt.AlignHCenter
+			Layout.topMargin: 15
+			Layout.rightMargin: 15
+		}
+		Item {Layout.fillHeight: true}
+		Clock {  Layout.alignment: Qt.AlignHCenter }
 	}
 }

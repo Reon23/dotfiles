@@ -5,9 +5,6 @@ import Quickshell.Wayland
 import Quickshell.Hyprland
 
 ColumnLayout {
-    anchors.fill: parent
-    anchors.margins: 15
-
     // Build the workspace list
     property var activeWorkspaces: {
         const ids = Hyprland.workspaces.values.map(w => w.id);
@@ -28,7 +25,6 @@ ColumnLayout {
         model: activeWorkspaces
 
         Item {
-            width: parent.width
             height: 20
 
             property int wsId: modelData
@@ -47,6 +43,5 @@ ColumnLayout {
         }
     }
 
-    Item { Layout.fillHeight: true }
 }
 
