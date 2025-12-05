@@ -29,5 +29,5 @@ ColumnLayout {
 			}
 		}
 	}
-	Item { Layout.fillHeight: true}
+	Item {Layout.fillHeight: true}
 }

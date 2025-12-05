@@ -10,6 +10,9 @@ PanelWindow {
 	anchors.right: true
 	implicitWidth: 40
 	color: "#000000"
-	Workspaces { }
-	Clock { }
+	ColumnLayout {
+		anchors.fill: parent
+		Workspaces { }
+		Clock { }
+	}
 }
