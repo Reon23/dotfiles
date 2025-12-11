@@ -12,7 +12,6 @@ ColumnLayout {
 
         let result = [1, 2, 3];
 
-        // Add only active workspaces above 3
         for (let i = 4; i <= maxId; i++) {
             if (ids.includes(i)) result.push(i);
         }
@@ -20,12 +19,13 @@ ColumnLayout {
         return result;
     }
 
-	// Render min 3 + active workspaces
     Repeater {
         model: activeWorkspaces
 
         Item {
             height: 20
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
 
             property int wsId: modelData
             property bool isActive: Hyprland.focusedWorkspace?.id === wsId
@@ -36,12 +36,12 @@ ColumnLayout {
             }
 
             Text {
+                anchors.centerIn: parent
                 text: ""
                 color: isActive ? "#ffffff" : "#555555"
                 font { pixelSize: 14; bold: true }
             }
         }
     }
-
 }
 
