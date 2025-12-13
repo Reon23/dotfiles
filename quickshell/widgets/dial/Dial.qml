@@ -9,6 +9,7 @@ Item {
 
     property string icon
     property int value: 0      // 0–100
+    property int fontSize: 0
     property color trackColor: "#444"
     property color fillColor: "#00aaff"
 
@@ -60,7 +61,7 @@ Item {
         id: valueLabel
         text: (dial.icon.length == 0) ? dial.value : dial.icon
         anchors.centerIn: parent
-        font.pixelSize: 18
+        font.pixelSize: (dial.fontSize) ? dial.fontSize : 18
         color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
