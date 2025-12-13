@@ -21,19 +21,21 @@ Item {
     Behavior on scale {
         NumberAnimation {
             duration: 300
-            easing.type: Easing.OutBack
+            easing.type: Easing.InOutCubic
         }
     }
 
     // Fade-in
     Behavior on opacity {
-        NumberAnimation { duration: 120 }
+        NumberAnimation { duration: 120
+        easing.type: Easing.InOutCubic
     }
+}
 
-    Dial {
-        Layout.alignment: Qt.AlignHCenter
-        value: Battery.percentage * 100
-        icon: (!Battery.isCharging)? "󱟞" : "󰂄"
-        fillColor: (Battery.isCharging)? "#a0ed11" : "#ed1144"
-    }
+Dial {
+    Layout.alignment: Qt.AlignHCenter
+    value: Battery.percentage * 100
+    icon: (!Battery.isCharging)? "󱟞" : "󰂄"
+    fillColor: (Battery.isCharging)? "#a0ed11" : "#ed1144"
+}
 }

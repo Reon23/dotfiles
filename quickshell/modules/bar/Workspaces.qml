@@ -39,6 +39,7 @@ ColumnLayout {
                 anchors.centerIn: parent
                 text: ""
                 color: isActive ? "#ffffff" : "#555555"
+                scale: isActive ? 1.0 : 0.5
                 font { pixelSize: 14; bold: true }
             }
         }
