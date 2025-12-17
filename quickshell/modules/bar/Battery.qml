@@ -36,6 +36,6 @@ Dial {
     Layout.alignment: Qt.AlignHCenter
     value: Battery.percentage * 100
     icon: (!Battery.isCharging)? "󱟞" : "󰂄"
-    fillColor: (Battery.isCharging)? "#a0ed11" : "#ed1144"
+    fillColor: (!Battery.isCharging)? "#ed1144" : "#ffffff"
 }
 }

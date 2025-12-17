@@ -10,7 +10,7 @@ PanelWindow {
 	anchors.bottom: true
 	anchors.right: true
 	implicitWidth: 50
-	color: "#000000"
+	color: "transparent"
 
 	ColumnLayout {
 		anchors.fill: parent
@@ -22,6 +22,9 @@ PanelWindow {
 			Layout.topMargin: 15
 		}
 		Item {Layout.fillHeight: true}
+		Pipewire {
+			Layout.alignment: Qt.AlignHCenter
+		}
 		Resources {
 			Layout.alignment: Qt.AlignHCenter
 		}

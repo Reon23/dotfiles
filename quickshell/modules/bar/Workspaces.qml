@@ -38,7 +38,7 @@ ColumnLayout {
             Text {
                 anchors.centerIn: parent
                 text: ""
-                color: isActive ? "#ffffff" : "#555555"
+                color: isActive ? "#ffffff" : "#666666"
                 scale: isActive ? 1.0 : 0.5
                 font { pixelSize: 14; bold: true }
                 Behavior on scale {

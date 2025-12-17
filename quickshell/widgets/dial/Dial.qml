@@ -10,9 +10,10 @@ Item {
     property string icon
     property int value: 0      // 0–100
     property int fontSize: 0
-    property color trackColor: "#444"
-    property color fillColor: "#00aaff"
-
+    // property color trackColor: "#444"
+    property color trackColor: "transparent"
+    // property color fillColor: "#00aaff"
+    property color fillColor: "white"
     Canvas {
         id: canvas
         anchors.fill: parent
@@ -29,14 +30,14 @@ Item {
             // --- background ring ---
             ctx.beginPath()
             ctx.strokeStyle = trackColor
-            ctx.lineWidth = 6
+            ctx.lineWidth = 3
             ctx.arc(cx, cy, r, 0, Math.PI * 2)
             ctx.stroke()
 
             // --- filled part ---
             ctx.beginPath()
             ctx.strokeStyle = fillColor
-            ctx.lineWidth = 6
+            ctx.lineWidth = 3
             ctx.arc(cx, cy, r, start, end)
             ctx.stroke()
         }
@@ -46,6 +47,7 @@ Item {
         Connections {
             target: dial
             onValueChanged: canvas.requestPaint()
+            onFillColorChanged: canvas.requestPaint()
         }
     }
 
@@ -53,7 +55,8 @@ Item {
         width: 25
         height: 25
         radius: width/2
-        color: "black"
+        // color: "black"
+        color: "transparent"
         anchors.centerIn: parent
     }
 
