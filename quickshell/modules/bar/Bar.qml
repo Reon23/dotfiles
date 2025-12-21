@@ -22,7 +22,7 @@ PanelWindow {
 			Layout.topMargin: 15
 		}
 		Item {Layout.fillHeight: true}
-		Pipewire {
+		Media {
 			Layout.alignment: Qt.AlignHCenter
 		}
 		Resources {
