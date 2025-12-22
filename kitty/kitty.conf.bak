@@ -1,0 +1,13 @@
+# Kitty font configuration
+# Primary font
+font_family "RecMonoCasual Nerd Font Mono Bold"
+font_size         14.0
+
+# Optional: set bold and italic variants if available
+bold_font         Comic Relief Bold
+italic_font       Comic Relief Italic
+
+# Background transparency
+background_opacity 0.8
+
+fallback_fonts FiraCode Nerd Font
