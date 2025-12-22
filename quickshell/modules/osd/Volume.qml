@@ -29,19 +29,14 @@ Scope {
 		onTriggered: root.shouldShowOsd = false
 	}
 
-	// The OSD window will be created and destroyed based on shouldShowOsd.
-	// PanelWindow.visible could be set instead of using a loader, but using
-	// a loader will reduce the memory overhead when the window isn't open.
 	LazyLoader {
 		active: root.shouldShowOsd
 
 		PanelWindow {
-			// Since the panel's screen is unset, it will be picked by the compositor
-			// when the window is created. Most compositors pick the current active monitor.
 
 			anchors.bottom: true
 			margins.bottom: screen.height / 20
-			exclusiveZone: 0
+			exclusiveZone: -1
 
 			implicitWidth: 300
 			implicitHeight: 50
@@ -65,8 +60,8 @@ Scope {
 					Text {
 						height: 30
 						text: " 󰕾 "
-                        color: "white"
-                        font.pixelSize: 24
+						color: "white"
+						font.pixelSize: 24
 					}
 
 					Rectangle {
