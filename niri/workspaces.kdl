@@ -1,0 +1,11 @@
+workspace "terminal" {
+    open-on-output "edp-1"
+}
+
+workspace "browser" {
+    open-on-output "edp-1"
+}
+
+workspace "applications" {
+    open-on-output "edp-1"
+}

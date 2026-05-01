@@ -1,0 +1,57 @@
+// window rules let you adjust behavior for individual windows.
+// find more information on the wiki:
+// https://yalter.github.io/niri/configuration:-window-rules
+
+// work around wezterm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // this regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // you can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+window-rule {
+    open-on-workspace "applications"
+}
+
+window-rule {
+	match title="kitty"
+	open-maximized-to-edges true
+	open-on-workspace "terminal"
+}
+
+window-rule {
+    match app-id=r#"firefox$"#
+    open-on-workspace "browser"
+}
+
+// open the firefox picture-in-picture player as floating by default.
+window-rule {
+    // this app-id regular expression will work for both:
+    // - host firefox (app-id is "firefox")
+    // - flatpak firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^picture-in-picture$"
+    open-floating true
+}
+
+
+// example: block out two password managers from screen capture.
+// (this example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.keepassxc$"#
+    match app-id=r#"^org\.gnome\.world\.secrets$"#
+
+    block-out-from "screen-capture"
+
+    // use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+// example: enable rounded corners for all windows.
+// (this example rule is commented out with a "/-" in front.)
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+}

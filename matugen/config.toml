@@ -1,27 +1,29 @@
 [config.wallpaper]
-set = true
-command = "swww"
-arguments = ["img", "--transition-type", "center"]
+auto = true
+command = "swww img {{ image }} --transition-type fade --transition-duration 0.8"
 
-[templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/colors.conf'
-post_hook = 'hyprctl reload'
+[templates.niri]
+input_path = '~/.config/matugen/templates/niri/focus.kdl'
+output_path = '~/.config/niri/focus.kdl'
 
 [templates.kitty]
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.toml'
+output_path = '~/.config/starship.toml'
+
 [templates.pywalfox]
 input_path = '~/.config/matugen/templates/pywalfox-colors.conf'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
-[templates.spicetify]
-input_path = '~/.config/matugen/templates/spicetify-colors.conf'
-output_path = '~/.config/spicetify/Themes/Matugen/color.ini'
-post_hook = 'spicetify apply'
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
 
 [templates.debug]
 input_path = '~/.config/matugen/templates/test.conf'

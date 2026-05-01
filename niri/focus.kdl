@@ -1,0 +1,38 @@
+layout {
+    focus-ring {
+        // uncomment this line to disable the focus ring.
+        // off
+
+        // how many logical pixels the ring extends out from the windows.
+        width 3
+
+        // colors can be set in a variety of ways:
+        // - css named colors: "red"
+        // - rgb hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
+        // - css-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
+
+        // color of the ring on the active monitor.
+        active-color "#c2c6d6"
+
+        // color of the ring on inactive monitors.
+        //
+        // the focus ring only draws around the active window, so the only place
+        // where you can see its inactive-color is on other monitors.
+        inactive-color "#505050"
+
+        // you can also use gradients. they take precedence over solid colors.
+        // gradients are rendered the same as css linear-gradient(angle, from, to).
+        // the angle is the same as in linear-gradient, and is optional,
+        // defaulting to 180 (top-to-bottom gradient).
+        // you can use any css linear-gradient tool on the web to set these up.
+        // changing the color space is also supported, check the wiki for more info.
+        //
+        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+
+        // you can also color the gradient relative to the entire view
+        // of the workspace, rather than relative to just the window itself.
+        // to do that, set relative-to="workspace-view".
+        //
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+}

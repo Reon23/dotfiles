@@ -7,7 +7,7 @@ import qs.services
 Item {
     id: root
     width: 35
-    height: 30
+    height: 35
 
     readonly property PwNode sink: Audio.sink
     readonly property int volume: sink.audio.volume * 100

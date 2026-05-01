@@ -39,7 +39,7 @@ ColumnLayout {
                 anchors.centerIn: parent
                 text: ""
                 color: isActive ? "#ffffff" : "#666666"
-                scale: isActive ? 1.0 : 0.5
+                scale: isActive ? 1.2 : 0.5
                 font { pixelSize: 14; bold: true }
                 Behavior on scale {
                     NumberAnimation {
